@@ -18,11 +18,13 @@ body{
 }
 
 #card{
-    height: 400px;
+    height: 440px;
     width: 300px;
     background-color: white;
     border-radius: 10px;
     border: 2px solid black;
+    position: relative;
+    overflow: hidden;
 }
 
 #storiyan{
@@ -33,6 +35,11 @@ body{
     border-bottom: 1px solid #dadadd;
     white-space: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#storiyan::-webkit-scrollbar{
+    display: none;
 }
 
 .story{
@@ -42,6 +49,7 @@ body{
     border: 3px solid red;
     overflow: hidden;
     display: inline-block;
+    margin-right: 6px;
 }
 
 .story img{
@@ -50,5 +58,14 @@ body{
     object-fit: cover;
     object-position: top;
 
+}
+
+#full-screen{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: none;
 }
 
